@@ -60,4 +60,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('categories', [CategoryController::class, 'insert']);
 
     Route::post('/logout', [AuthController::class, 'logout']);
+    
+    Route::get('product/{slug},[ProductController::class,'addData'])->name('product');
 });
